@@ -145,10 +145,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         popupTabla.add(popAnyadir);
 
         popEditar.setText("Editar juego…");
+        popEditar.addActionListener(this::popEditarActionPerformed);
         popupTabla.add(popEditar);
         popupTabla.add(jSeparator2);
 
         popEliminar.setText("Eliminar juego");
+        popEliminar.addActionListener(this::popEliminarActionPerformed);
         popupTabla.add(popEliminar);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -228,11 +230,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         mniEditar.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         mniEditar.setText("Editar juego…");
+        mniEditar.addActionListener(this::mniEditarActionPerformed);
         mnJuegos.add(mniEditar);
         mnJuegos.add(jSeparator1);
 
         mniEliminar.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_DELETE, 0));
         mniEliminar.setText("Eliminar juego");
+        mniEliminar.addActionListener(this::mniEliminarActionPerformed);
         mnJuegos.add(mniEliminar);
 
         jMenuBar1.add(mnJuegos);
@@ -291,6 +295,22 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void popAnyadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_popAnyadirActionPerformed
                 btnAnyadirActionPerformed(evt);
     }//GEN-LAST:event_popAnyadirActionPerformed
+
+    private void mniEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniEditarActionPerformed
+                editarSeleccionado();
+    }//GEN-LAST:event_mniEditarActionPerformed
+
+    private void popEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_popEditarActionPerformed
+                editarSeleccionado();
+    }//GEN-LAST:event_popEditarActionPerformed
+
+    private void mniEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniEliminarActionPerformed
+                eliminarSeleccionado();
+    }//GEN-LAST:event_mniEliminarActionPerformed
+
+    private void popEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_popEliminarActionPerformed
+                eliminarSeleccionado();
+    }//GEN-LAST:event_popEliminarActionPerformed
 
     /**
      * @param args the command line arguments
